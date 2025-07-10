@@ -191,7 +191,7 @@ sequelize
   .sync()
   // .sync({ force: true })
   .then(result => {
-    app.listen(process.env.PORT);
+    app.listen(process.env.PORT, process.env.IP);
     console.log("Server Started");
   })
   .catch(err => {
