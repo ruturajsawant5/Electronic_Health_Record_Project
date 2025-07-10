@@ -58,9 +58,9 @@ const fileFilter = (req, file, cb) => {
 
 //***********************************************************
 aws.config.update({
-  accessKeyId: "AKIA5WCHYC22OXDPC3XR",
-  secretAccessKey: "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",
-  region: "ap-south-1"
+  accessKeyId: process.env.ACCESS_KEY_ID,
+  secretAccessKey: process.env.SECRET_ACCESS_KEY,
+  region: process.env.REGION
 });
 
 var s3 = new aws.S3();
